@@ -103,16 +103,60 @@ section h3 {
 }
 
 .participants-list {
-  margin-left: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   color: #263238;
 }
 
-.participants-list li {
-  margin: 2px 0;
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 6px 0;
+  padding: 6px 8px;
+  background-color: #ffffff;
+  border: 1px solid #dbe2ff;
+  border-radius: 5px;
+  list-style: none;
+}
+
+.participant-item::marker,
+.participant-empty::marker {
+  content: "";
+}
+
+.participant-email {
+  color: #263238;
+  font-size: 14px;
+}
+
+.participant-remove-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid #ef9a9a;
+  border-radius: 6px;
+  background-color: #fff5f5;
+  color: #c62828;
+  line-height: 1;
+}
+
+.participant-remove-btn:hover {
+  background-color: #ffebee;
+  border-color: #e57373;
+}
+
+.participant-remove-btn .fa-trash-can {
+  font-size: 16px;
 }
 
 .participant-empty {
-  list-style-type: circle;
+  list-style: none;
   color: #5f6b7a;
   font-style: italic;
 }
@@ -149,6 +193,17 @@ button {
 
 button:hover {
   background-color: #3949ab;
+}
+
+.participants-list .participant-remove-btn {
+  background-color: #fff5f5;
+  border: 1px solid #ef9a9a;
+  color: #c62828;
+}
+
+.participants-list .participant-remove-btn:hover {
+  background-color: #ffebee;
+  border-color: #e57373;
 }
 
 .message {
