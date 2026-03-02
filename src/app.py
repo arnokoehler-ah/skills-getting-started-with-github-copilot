@@ -47,6 +47,11 @@ def root():
     return RedirectResponse(url="/static/index.html")
 
 
+@app.get("/favicon.ico", include_in_schema=False)
+def favicon():
+    return RedirectResponse(url="/static/favicon.svg")
+
+
 @app.get("/activities")
 def get_activities():
     return activities
